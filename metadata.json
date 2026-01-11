@@ -1,0 +1,7 @@
+{
+  "name": "Industrial Warehouse Receiving Pro",
+  "description": "Native Android warehouse receiving application with industrial aesthetics and Jetpack Compose.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
