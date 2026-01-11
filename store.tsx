@@ -1,6 +1,6 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { User, UserRole, Product, PurchaseOrder, Transaction, AppSettings, AppView } from './types';
+import { User, Product, PurchaseOrder, Transaction, AppSettings, AppView } from './types';
 
 interface AppContextType {
   currentUser: User | null;
@@ -37,18 +37,15 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     return saved ? JSON.parse(saved) : defaultSettings;
   });
 
-  // Persist settings
   useEffect(() => {
     localStorage.setItem('wh_settings', JSON.stringify(settings));
   }, [settings]);
 
-  // Load transactions from local storage (Simulating Room DB)
   useEffect(() => {
     const savedTrans = localStorage.getItem('wh_transactions');
     if (savedTrans) setTransactions(JSON.parse(savedTrans));
   }, []);
 
-  // Save transactions to local storage
   useEffect(() => {
     localStorage.setItem('wh_transactions', JSON.stringify(transactions));
   }, [transactions]);

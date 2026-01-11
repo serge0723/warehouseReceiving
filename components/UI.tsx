@@ -13,7 +13,7 @@ export const Button: React.FC<ButtonProps> = ({
   className = '', 
   ...props 
 }) => {
-  const baseStyles = 'py-5 px-8 rounded-xl font-black text-xl transition-all active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none flex items-center justify-center gap-3 tracking-wider uppercase';
+  const baseStyles = 'py-4 px-6 rounded-xl font-black text-lg transition-all active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none flex items-center justify-center gap-3 tracking-wider uppercase';
   const variants = {
     primary: 'bg-yellow-400 text-zinc-950 industrial-shadow hover:bg-yellow-300',
     secondary: 'bg-zinc-800 text-zinc-100 industrial-shadow hover:bg-zinc-700 border border-zinc-700',
@@ -38,9 +38,9 @@ export const Input: React.FC<React.InputHTMLAttributes<HTMLInputElement> & { lab
 }) => {
   return (
     <div className="flex flex-col gap-2 w-full">
-      {label && <label className="text-zinc-500 font-bold uppercase text-sm tracking-widest">{label}</label>}
+      {label && <label className="text-zinc-500 font-bold uppercase text-xs tracking-widest">{label}</label>}
       <input 
-        className={`bg-zinc-900 border-2 border-zinc-800 text-zinc-100 p-5 rounded-xl text-xl font-bold transition-colors focus:border-yellow-400 ${className}`}
+        className={`bg-zinc-900 border-2 border-zinc-800 text-zinc-100 p-4 rounded-xl text-lg font-bold transition-colors focus:border-yellow-400 ${className}`}
         {...props} 
       />
     </div>
@@ -63,7 +63,7 @@ export const Badge: React.FC<{ children: React.ReactNode, color?: 'yellow' | 'gr
     red: 'bg-rose-400/10 text-rose-400 border-rose-400/20'
   };
   return (
-    <span className={`px-3 py-1 rounded-full text-xs font-black uppercase border tracking-widest ${colors[color]}`}>
+    <span className={`px-2 py-0.5 rounded-full text-[10px] font-black uppercase border tracking-widest ${colors[color]}`}>
       {children}
     </span>
   );

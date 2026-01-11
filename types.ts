@@ -25,7 +25,7 @@ export interface Transaction {
   id: string;
   timestamp: string;
   type: 'PO' | 'AD_HOC';
-  reference: string; // PO Number or DO Reference
+  reference: string;
   sku: string;
   qty: number;
   device: string;

@@ -28,7 +28,7 @@ const AppContent: React.FC = () => {
 const App: React.FC = () => {
   return (
     <AppProvider>
-      <div className="min-h-screen bg-zinc-950 selection:bg-yellow-400 selection:text-zinc-950">
+      <div className="min-h-screen bg-zinc-950 selection:bg-yellow-400 selection:text-zinc-950 flex flex-col">
         <AppContent />
       </div>
     </AppProvider>

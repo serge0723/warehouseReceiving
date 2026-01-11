@@ -1,6 +1,6 @@
 {
   "name": "Industrial Warehouse Receiving Pro",
-  "description": "Native Android warehouse receiving application with industrial aesthetics and Jetpack Compose.",
+  "description": "High-performance industrial web terminal for warehouse receiving and logistics management.",
   "requestFramePermissions": [
     "camera"
   ]
